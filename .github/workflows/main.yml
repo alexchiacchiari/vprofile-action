@@ -1,5 +1,5 @@
 name: vprofile-actions
-on: workflow_dispatch
+on: workflow_dispatch # Trigger manually
 
 env: 
   AWS_REGION: us-east-1
@@ -42,7 +42,7 @@ jobs:
     
     - name: SonarQube Quality Gate
       id: sonar-quality-gate-check
-      uses: SonarSource/sonarqube-quality-gate-action@v2
+      uses: sonarsource/sonarqube-quality-gate-action@master
       timeout-minutes: 5
       with:
         sonar-token: ${{ secrets.SONAR_TOKEN }}
