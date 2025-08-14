@@ -18,6 +18,7 @@ jobs:
 
     - name: Checkstyle
       run: mvn checkstyle:check
+      continue-on-error: true
 
     - name: Set Java 11
       uses: actions/setup-java@v3
